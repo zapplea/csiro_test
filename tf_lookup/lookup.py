@@ -10,7 +10,7 @@ def gen():
     with g.device('/gpu:0'):
         with g.as_default():
             print('create graph')
-            t=tf.Variable(np.array(table),name='table')
+            t=tf.Variable(np.array(table[:10]),name='table')
             saver=tf.train.Saver()
         with tf.Session(graph=g) as sess:
             print('print t:')
