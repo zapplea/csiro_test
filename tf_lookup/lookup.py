@@ -24,9 +24,9 @@ def restore():
     with g.device('/gpu:0'):
         with g.as_default():
             saver=tf.train.import_meta_graph('lookup_model.ckpt.meta')
-        with t.Session(graph=g) as sess:
+            v = tf.get_tensor_by_name('table:0')
+        with tf.Session(graph=g) as sess:
             saver.restore(sess,'lookup_model.ckpt')
-            v=tf.get_tensor_by_name('table:0')
             print(sess.run(v[:10]))
 
 
