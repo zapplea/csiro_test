@@ -16,7 +16,7 @@ module load tensorflow/1.3.0-py35-gpu
 echo "loaded"
 if test $1 = "a";
 then
-	python /home/che313/lab/gpu.py
+	python gpu.py
 else
 	echo not
 fi
