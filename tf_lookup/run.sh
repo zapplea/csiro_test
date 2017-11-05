@@ -11,7 +11,7 @@ echo "loading"
 module load python/3.6.1
 module load cudnn/v6
 module load cuda/8.0.61
-module load tensorflow/1.3.0rc2-py35-gpu
+module load tensorflow/1.3.0-py35-gpu
 echo "loaded"
 
 python lookup.py
