@@ -15,7 +15,9 @@ def gen():
         with tf.Session(graph=g) as sess:
             print('print t:')
             sess.run(tf.global_variables_initializer())
-            print(sess.run(t[:10]))
+            print('run table')
+            result=sess.run(t)
+            print(type(result))
             saver.save(sess,'lookup_model.ckpt')
 
 
