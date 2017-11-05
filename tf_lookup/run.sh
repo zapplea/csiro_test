@@ -6,7 +6,7 @@
 #SBATCH --mem=20GB
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --gres=gpu:0
+#SBATCH --gres=gpu:1
 echo "loading"
 module load python/3.6.1
 module load cudnn/v6

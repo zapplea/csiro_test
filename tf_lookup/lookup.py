@@ -7,7 +7,7 @@ def gen():
     dic=pickle.load(f)
     table=pickle.load(f)
     g=tf.Graph()
-    with g.device('/gpu:0'):
+    with g.device('/gpu:1'):
         with g.as_default():
             print('create graph')
             t=tf.Variable(np.array(table),name='table')
